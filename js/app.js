@@ -11,10 +11,13 @@ btnCotizar.addEventListener('click', () => {
 
     if(propiedad === null){
         alert('Seleccione una propiedad');
+        spanPoliza.innerText = "";
     } else if (ubicacion === null){
         alert('Seleccione una ubicación');
+        spanPoliza.innerText = "";
     } else if (metros2 <= 0){
         alert('Ingrese un valor mayor a 0');
+        spanPoliza.innerText = "";
     } else {
         const valorPoliza = calcularPoliza(propiedad, ubicacion, metros2);
         spanPoliza.innerText = valorPoliza.toFixed(2);
