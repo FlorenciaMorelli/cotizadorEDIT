@@ -119,3 +119,55 @@ body{
         border: 1px solid var(--primary-color);
     }
 }
+
+@media (max-width: 480px) {
+    body{
+        div.infoMessage{
+            position: fixed;
+            top: 3rem;
+            right: 3rem;
+            min-width: 60%;
+        }
+    
+        h1 {
+            font-size: 3rem;
+        }
+        
+        p{
+            font-size: 1.2rem;
+        }
+    
+        p.price{
+            font-size: 1.5rem;
+        }
+        
+        label{
+            font-size: 1rem;
+        }
+    
+        input, select{
+            font-size: 1rem;
+        }
+    
+        button{
+            margin-top: 1rem;
+        }
+    
+        .calculador {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    body{
+        div.infoMessage{
+            position: fixed;
+            top: 3rem;
+            right: 3rem;
+            min-width: 40%;
+        }
+    }
+}
