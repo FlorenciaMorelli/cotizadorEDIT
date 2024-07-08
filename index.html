@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="js/showInfo.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Cotizador - Educación IT</title>
+</head>
+<body>
+    <span class="material-symbols-outlined" id="infoToggle" onclick="showInfo()">
+        info
+    </span>
+    <div class="infoMessage" id="infoMessage">
+        <p>
+            This website was developed with HTML5, CSS3 and JavaScript.
+        </p>
+    </div>
+
+    <h1>Seguros del hogar</h1>
+
+    <div class="calculador">
+        <p>Complete los datos solicitados</p>
+
+        <label for="propiedad">Seleccione el tipo de propiedad</label>
+        <select id="propiedad" name="propiedad">
+            <option value="1.009">Casa</option>
+            <option value="1.005">P.H.</option>
+            <option value="1.002">Dto. Edificio</option>
+            <option value="1.019">Barrio Privado</option>
+            <option value="1.039">Oficina</option>
+            <option value="1.041">Local comercial</option>
+            <option value="1.092">Depósito logística</option>
+        </select>
+
+        <label for="ubicacion">Selecciona su ubicación</label>
+        <select id="ubicacion" name="ubicacion">
+            <option value="1.013">CABA</option>
+            <option value="1.004">Tandil</option>
+            <option value="1.029">Costa Atlántica</option>
+            <option value="1.000">Patagonia Argentina</option>
+        </select>
+
+        <label for="metros2">Ingresa los Metros cuadrados:</label>
+        <input type="number" id="metros2" value="20" min="20" max="500">
+
+        <div>
+            <button id="cotizar">Cotizar</button>
+        </div>
+
+        <div>
+            <p class="price">
+                Precio estimado: U$D <span id="valorPoliza">0.00</span>
+            </p>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>

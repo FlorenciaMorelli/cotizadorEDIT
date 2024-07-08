@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+    --black: #000040;
+    --primary-color: #02376b;
+    --primary-color-soft: rgba(2, 55, 107, 0.5);
+    --accent-color: #693f00;
+    --background-color: #E8E8E8;
+}
+
+body{
+    font-family:'Roboto', Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--black);
+
+    #infoToggle{
+        float: right;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        padding: 0.2rem;
+
+        width: 48px;
+        height: 48px;
+        
+        z-index: 100;
+        cursor: pointer;
+        user-select: none;
+
+        &:hover{
+            transition:  all .3s ease;
+            scale: 1.1;
+        }
+    }
+
+    div.infoMessage{
+        display: none;
+        position: fixed;
+        top: 4rem;
+        right: 5rem;
+        max-width: 20vw;
+        z-index: 999;
+        padding: 1rem;
+        background: rgba(232, 232, 232, 0.29);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(4.6px);
+        -webkit-backdrop-filter: blur(4.6px);
+        border: 1px solid rgba(232, 232, 232, 0.3);
+        border-radius: .5rem;
+
+        text-align: center;
+        
+        overflow: hidden;
+
+        p{
+            font-size: 1rem;
+        }
+    }
+
+    h1 {
+        font-weight: 400;
+        font-size: 4rem;
+        text-align: center;
+    }
+    
+    p{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    p.price{
+        color: var(--accent-color);
+        font-size: 2rem;
+    }
+    
+    label {
+        display: inline-block;
+        width: 100%;
+        margin: 0.5rem 0;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    input, select{
+        display: inline-block;
+        width: 100%;
+        padding: 0.5rem;
+        padding-inline: 0;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        border-color: transparent;
+    }
+
+    button{
+        min-width: 8rem;
+        min-height: 3rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+        border-radius: .3rem;
+        background-color: var(--black);
+        color: white;
+        cursor: pointer;
+
+        &:hover{
+            transition: all .3s ease-in-out;
+            transform: scale(1.1);
+        }
+    }
+
+    .calculador {
+        width: 80%;
+        padding: 3%;
+        margin: auto;
+        background: var(--primary-color-soft);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        border: 1px solid var(--primary-color);
+    }
+}
+
+@media (max-width: 480px) {
+    body{
+        div.infoMessage{
+            position: fixed;
+            top: 3rem;
+            right: 3rem;
+            min-width: 60%;
+        }
+    
+        h1 {
+            font-size: 3rem;
+        }
+        
+        p{
+            font-size: 1.2rem;
+        }
+    
+        p.price{
+            font-size: 1.5rem;
+        }
+        
+        label{
+            font-size: 1rem;
+        }
+    
+        input, select{
+            font-size: 1rem;
+        }
+    
+        button{
+            margin-top: 1rem;
+        }
+    
+        .calculador {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    body{
+        div.infoMessage{
+            position: fixed;
+            top: 3rem;
+            right: 3rem;
+            min-width: 40%;
+        }
+    }
+}
